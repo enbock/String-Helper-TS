@@ -1,0 +1,48 @@
+{
+  "name": "@enbock/string-helper-ts",
+  "description": "An atomic helper implementation for strings.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/enbock/StringHelper-TypeScript",
+  "license": "MIT",
+  "author": "Endre Bock <npm.dev@itbock.de>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npx tsc --build tsconfig.json -v",
+    "test": "jest"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-typescript": "^7.10.1",
+    "@babel/runtime": "^7.10.3",
+    "@types/jest": "^26.0.3",
+    "jest": "^26.1.0",
+    "typescript": "^3.9.5"
+  },
+  "jest": {
+    "roots": [
+      "./src"
+    ],
+    "collectCoverage": true,
+    "verbose": true,
+    "collectCoverageFrom": [
+      "**/*.ts"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "\\.test\\.ts$",
+    "testURL": "http://localhost",
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100
+      }
+    }
+  }
+}
