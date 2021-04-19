@@ -1,7 +1,7 @@
 {
   "name": "@enbock/string-helper-ts",
   "description": "An atomic helper implementation for strings.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/enbock/StringHelper-TypeScript",
   "license": "MIT",
   "author": "Endre Bock <npm.dev@itbock.de>",
