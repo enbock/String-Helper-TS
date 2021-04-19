@@ -1,5 +1,9 @@
-export default class StringHelper {
+interface WrappedSortObject {
+    key: string,
+    entity: Object
+}
 
+export default class StringHelper {
     private static diacriticsMap: any[] = [
         {
             'base': 'A',
@@ -199,6 +203,22 @@ export default class StringHelper {
 
     public static sortList(list: Object[], property: string): Object[] {
         return list.sort((a: Object, b: Object) => StringHelper.compareByProperty(a, b, property));
+    }
+
+    public static sortListByProperties(list: Object[], properties: string[]): Object[] {
+        let i:string, j: string, entityList: WrappedSortObject[] = [];
+        for(i in list) {
+            const entity:Object = list[i];
+            const wrapped:WrappedSortObject = {key:'', entity: entity};
+            for (j in properties) {
+                const property:string = properties[j];
+                if (!entity.hasOwnProperty(property)) continue;
+                wrapped.key = wrapped.key + (entity as any)[property]
+            }
+            entityList.push(wrapped);
+        }
+        entityList = StringHelper.sortList(entityList, 'key') as WrappedSortObject[];
+        return entityList.map((v:WrappedSortObject) => v.entity);
     }
 
     private static compareByProperty(a: Object, b: Object, property: string): number {

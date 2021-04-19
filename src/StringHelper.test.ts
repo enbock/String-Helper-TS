@@ -34,4 +34,18 @@ describe(StringHelper, function () {
         const expectedList: Object[] = [objectA, objectB, objectC];
         expect(result).toEqual(expectedList);
     });
+
+    it('should sort objects multiple times', function () {
+        const objectA: Object = {first: 'Armin', second: 'Cool'};
+        const objectB: Object = {first: 'Zodiac', second: 'Cool'};
+        const objectC: Object = {first: 'Barbel', second: 'Alter'};
+        const objectD: Object = {first: 'Armin', second: 'Alter'};
+        const objectE: Object = {first: 'Erwin', second: 'Charles'};
+        const objectF: Object = {second: 'Xenos'};
+        const list: Object[] = [objectA, objectB, objectC, objectD, objectE, objectF];
+        const result: Object[] = StringHelper.sortListByProperties(list, ['second', 'first']);
+
+        const expectedList: Object[] = [objectD, objectC, objectE, objectA, objectB, objectF];
+        expect(result).toEqual(expectedList);
+    });
 });
