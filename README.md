@@ -1,4 +1,6 @@
 # StringHelper-TypeScript
+[![Publishing](https://github.com/enbock/String-Helper-TS/workflows/Publishing/badge.svg)](https://github.com/enbock/State-Value-Observer/actions)
+
 A simple helper to work with strings in typescript.
 
 ## Testing
