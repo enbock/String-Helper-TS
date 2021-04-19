@@ -5,3 +5,4 @@
 !/*.d.ts
 !/*.js
 !/dist/**/*
+babel.config.js
