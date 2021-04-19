@@ -1,5 +1,5 @@
 # StringHelper-TypeScript
-[![Publishing](https://github.com/enbock/String-Helper-TS/workflows/Publishing/badge.svg)](https://github.com/enbock/State-Value-Observer/actions)
+[![Publishing](https://github.com/enbock/String-Helper-TS/workflows/Publishing/badge.svg)](https://github.com/enbock/String-Helper-TS/actions)
 
 A simple helper to work with strings in typescript.
 
